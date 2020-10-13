@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 110</title>
+    <style>
+        p, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 110</h1>
+    <xmp>
+        An HTML page contains no embedded JavaScript or CSS code.
+        The body of the page contains only the following line of code.
+        
+        <p id="test">test</p>
+        
+        A CSS style sheet must be applied dynamically.
+        The style must visibly change the appearance of the paragraph on the page.
+
+        You need to apply a style to the paragraph.
+    </xmp>
+    <div><b>Which line of code should you use?</b></div>
+    <xmp>
+        A. document.getElementById("test").style.border = "0";
+        B. document.getElementById("test").style.position = "static";
+        C. document.getElementById("test").style.padding = "15px";
+        D. document.getElementById("test").style.top = "5px";
+    </xmp>
+    <p id="test">test</p>
+
+    <div>
+        <button onclick=functionOpcionA()>Opción A</button>
+        <button onclick=functionOpcionB()>Opción B</button>
+        <button onclick=functionOpcionC()>Opción C</button>
+        <button onclick=functionOpcionD()>Opción D</button>
+        </div>
+    <script>
+        function functionOpcionA(){
+            document.getElementById("test").style.border = "0";
+        }
+        function functionOpcionB(){
+            document.getElementById("test").style.position = "static";
+        }
+        function functionOpcionC(){
+            document.getElementById ("test").style.padding = "15px";
+        }
+        function functionOpcionD(){
+            document.getElementById("test").style.top = "5px";
+        }
+    </script>
+    <xmp>
+        ******************
+        Correct Answer: C
+        ******************
+        
+        Explanation/Reference:
+        De las cuatro opciones, la C es la única que altera el estilo.
+        
+        https://www.w3schools.com/CSSref/pr_border-style.asp
+        https://www.w3schools.com/cssref/pr_class_position.asp
+        https://www.w3schools.com/CSSref/pr_padding.asp
+        https://www.w3schools.com/CSSref/pr_pos_top.asp
+
+    </xmp>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 93</title>
+    <style>
+        form, h1, div, ul {
+            padding-left: 58px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>QUESTION 93</h1>
+    <xmp>
+        DRAG DROP
+        You develop an HTML5 webpage. You have the following HTML markup:
+        
+        <ul id="languages">
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>Classic ASP</li>
+            <li>ASP.Net</li>
+        </ul>
+        
+        You also have the following JavaScript variable defined:
+
+        var languages = [];
+
+        You need to add statements to an existing JavaScript function to sort the list items.
+    </xmp>
+    <div><b>Which four code blocks should you use to develop the solution?</b></div>
+    <div style="color:red">NOTA: En los bucles, items.length se guarda en la variable 'ele' (no confundir con el número 1).</div>
+    <xmp>
+        To answer, move the appropriate code blocks from the list of code blocks
+        to the answer area and arrange them in the correct order.
+
+            A:  var items = document.getElementsByTagName("li");
+
+            B: languages.sort (function (s) {return s.innerHTML;});
+
+            C: languages = $.makeArray(items);
+
+            D: for (var i = 0, l = items.length; i < l; i++)
+                languages.push(items[i].innerHTML);
+
+            E: languages.sort();
+
+            F: for (var i = 0, l = items.length; i < l; i++)
+                items[i].innerHTML = languages[i];
+
+            G: $(languages).appendTo("#languages");
+
+            H: items = $.makeArray(languages);
+
+        ****************************
+        CORRECT ANSWER: A, D, E y F
+        ****************************
+        Explanation:
+        The getElementsByTagName() method accesses all elements with the specified tagname.
+    </xmp>   
+    
+    <ul id="languages">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Classic ASP</li>
+        <li>ASP.Net</li>
+    </ul>
+    <div>
+    <button onclick="functionSortList()">Ordenar lista</button>
+    </div>
+    <script>
+        function functionSortList(){
+            var languages = [];
+            var items = document.getElementsByTagName("li");
+            for (var i = 0, l = items.length; i < l; i++) {
+                languages.push(items[i].innerHTML);
+            }
+            languages.sort();
+            for (var i = 0, l = items.length; i < l; i++){
+                items[i].innerHTML = languages[i];
+            }    
+        }
+    </script>
+    
+
+</body>
+
+</html>

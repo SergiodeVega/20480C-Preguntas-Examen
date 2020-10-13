@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 195</title>
+
+    <style type="text/css">
+        table, p, h1 {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 195</h1>
+    <xmp>
+        You are developing an application that retrieves a stock rate from an external web service.
+        A web page displays a simple rotating animation to indicate whether the stock rate is increased or decreased.
+        The default image indicates unchanged or neutral. (flecha apuntando a la derecha)
+        The arrow must point down if the stock rate is decreased.
+        You need to ensure that the arrow points down when the stock rate decreases.
+    </xmp>        
+    <p><b>Which CSS style should you apply?</b></p>
+    <xmp>
+        A:  <style type="text/css">
+                div {
+                    width:20px;
+                    height:20px;
+                    transform:move(90deg); }
+            </style>
+
+        B:  <style type="text/css">
+                div {
+                    width:20px;
+                    height:20px;
+                    transform:rotate(-90deg); }
+            </style>
+
+        C:  <style type="text/css">
+            div {
+                width:20px;
+                height:20px;
+                transform:move(-90deg); }
+        </style>
+
+        D:  <style type="text/css">
+                div {
+                    width:20px;
+                    height:20px;
+                    transform:rotate(90deg); }
+            </style>
+    </xmp>
+    <table>
+        <tr>
+            <td>
+                Stock Price
+            </td>
+            <td>
+                <div id="test">
+                    <img src="195.jpg">
+                </div>
+            </td>
+        </tr>
+        
+    </table>
+    
+    <p>
+        <button onclick=functionOpcionA()>Opción A</button>
+        <button onclick=functionOpcionB()>Opción B</button>
+        <button onclick=functionOpcionC()>Opción C</button>
+        <button onclick=functionOpcionD()>Opción D</button>
+        <script>
+            function functionOpcionA(){
+                document.getElementById("test").style.width="20px";
+                document.getElementById("test").style.height="20px";
+                document.getElementById("test").style.transform = "move(90deg)";
+            }
+            function functionOpcionB(){
+                document.getElementById("test").style.width="20px";
+                document.getElementById("test").style.height="20px";
+                document.getElementById("test").style.transform = "rotate(-90deg)";
+            }
+            function functionOpcionC(){
+                document.getElementById("test").style.width="20px";
+                document.getElementById("test").style.height="20px";
+                document.getElementById("test").style.transform = "move(-90deg)";
+            }
+            function functionOpcionD(){
+                document.getElementById("test").style.width="20px";
+                document.getElementById("test").style.height="20px";
+                document.getElementById("test").style.transform = "rotate(90deg)";
+            }
+        </script>
+    </p>
+    <xmp>
+        *******************
+        Correct Answer: D
+        *******************
+        
+        Explanation/Reference:
+
+        transform:rotate
+        rotate(angle)
+        Defines a 2D rotation, the angle is specified in the parameter
+        Syntax: object.style.transform="rotate(7deg)"
+
+        Reference: https://www.w3schools.com/cssref/css3_pr_transform.asp
+    </xmp>
+
+    
+
+</body>
+
+</html>

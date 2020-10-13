@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 161</title>
+    <style>
+        form, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 161</h1>
+    <xmp>
+        You develop an application to host user-generated HTML and JavaScript content.
+        A common error handler in your application must process all unhandled errors.
+        You need to implement global error handling for the application.
+    </xmp>
+    <div><b>Which code segment should you use?</b></div>
+    <xmp>
+        A:  window.onerror = function () {
+            ....
+            }
+
+        B:  Error.constructor = function () {
+            ....
+            }
+
+        C:  Error = function () {
+            ...
+            }
+
+        D: document.onerror = function () {
+            ...
+            }
+
+        *******************
+        Correct Answer: A
+        *******************
+
+        Explanation:
+
+        GlobalEventHandlers.onerror
+        An event handler for runtime script errors.
+
+        Syntax
+        window.onerror = funcRef;
+
+        References:
+        https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror
+    </xmp>
+
+
+
+</body>
+
+</html>

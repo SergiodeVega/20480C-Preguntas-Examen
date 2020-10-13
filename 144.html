@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 144</title>
+    <style>
+        form, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>Question 144</H1>
+    <xmp>
+        You are developing an application by using JavaScript.
+        You must write a function named Add that returns the sum of the variables named v1, v2, v3, v4.
+        The addValues function must call the Add function and use the appropriate owner object.
+        You need to complete the sum function.
+
+        How should you complete the relevant code? (To answer, use the appropriate code segment or segments
+        to the correct location or locations in the answer area. Use only code segments that apply.)
+
+        Code Segments                       Answer Area
+
+                                            <script>
+        A: v3 + v4;                         function add(v1,v2) {
+        B: o.v3 + o.v4;                         return v1+v2+ ***** ANSWER-1 *****
+        C: this.v3 + this.v4;               }   
+        D: this.o.v3 + this.o.v4;           function addValues() {
+        E: add (o, 15, 3);                      var o = { v3: 10, v4: 13};
+        F: add (15,3) + o;                      var res = ***** ANSWER-2 *****
+        G: add.call (o, 15, 3);                 return res;
+        H: add.apply (o, 15, 3);            }
+                                            </script>
+
+    </xmp>
+    <script>
+        function add(v1, v2) {
+            return v1 + v2 + this.v3 + this.v4;
+        }
+
+        function addValues() {
+            var o = { v3: 10, v4: 13 };
+            var res = add.call (o, 15, 3);
+
+            return res;
+        }
+        
+    </script>
+    <xmp>
+        ************************
+        CORRECT ANSWER : C y G
+        ************************
+
+        Explanation/Reference:
+        
+        * What is the difference between call and apply?
+        apply lets you invoke the function with arguments as an array;
+        call requires the parameters be listed explicitly.
+        
+        Pseudo syntax:
+        theFunction.apply(valueForThis, arrayOfArgs)
+        theFunction.call(valueForThis, arg1, arg2, ...)
+
+        Reference: https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+    </xmp>
+
+    <div>
+        <button onclick="alert(addValues())">Test Solution</button>
+    </div>
+
+    <xmp>
+        <script>
+            function add(v1, v2) {
+                return v1 + v2 + this.v3 + this.v4;
+            }
+            function addValues() {
+                var o = { v3: 10, v4: 13 };
+                var res = add.call (o, 15, 3);
+                return res;
+            }
+            
+        </script>
+    </xmp>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 76</title>
+    <style>
+        form, h1, h2, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>QUESTION 76</h1>
+    <xmp>
+        You are developing an HTML5 web application and are styling text.
+        You need to use the text-transform CSS property.
+    </xmp>
+    <div><b>Which value is valid for the text-transform property?</b></div>
+    <xmp>    
+        A. Italic
+        B. Line-through
+        C. Capitalize
+        D. 20px
+    </xmp>
+    <h2 id=demo>mi nombre es pedro</h2>
+    <div>
+        <button onclick="functionOpcionA()">A: Italic</button>
+        <button onclick="functionOpcionB()">B: Line-through</button>
+        <button onclick="functionOpcionC()">C: Capitalize</button>
+        <button onclick="functionOpcionD()">D: 20px</button>
+    </div>
+    <script>
+        function functionOpcionA() {
+            document.getElementById("demo").style="text-transform:Italic";
+        }
+        function functionOpcionB() {
+            document.getElementById("demo").style="text-transform:Line-through";
+        }
+        function functionOpcionC() {
+            document.getElementById("demo").style="text-transform:Capitalize";
+        }
+        function functionOpcionD() {
+            document.getElementById("demo").style="text-transform:20px";
+        }
+    </script>
+    <xmp>    
+        ******************
+        Correct Answer: C
+        ******************
+        Example:
+        <h2 style=text-transform:XXXXXXXX> mi nombre es pedro</h2>
+
+        Explanation/Reference:
+        CSS Syntax
+        text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
+        
+        Reference: CSS text-transform Property
+        http://www.w3schools.com/cssref/pr_text_text-transform.asp
+    </xmp>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 59</title>
+    <style>
+        form, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>QUESTION 59</h1>
+    <xmp>
+        You are creating a class named Sedan that must inherit from the Car class.
+        The Sedan class must modify the inherited fourDoor () method.
+        The Car class is defined as follows.
+
+        function car() {
+            Car.prototype.fourDoor = function () { }
+            alert('four doors');
+        }
+
+        Future instances of Sedan must be created with the overridden method.
+        You need to write the code to implement the Sedan class.
+    </xmp>
+    <div><b>Which two code segments should you use?</b></div>
+    <xmp>
+        (Each correct answer presents part of the solution. Choose two.)
+
+        A: Sedan.fourDoor = function () {
+            alert('door count'); }
+
+        B: Sedan.prototype.fourDoor = function () {
+            alert('door count'); }
+
+        C: function Sedan() {
+            Car.call(this); }
+            Sedan.prototype = new Car();
+            Sedan.prototype.constructor = Sedan;
+
+        D: function Sedan() {
+            Car.call(this); }
+            Sedan.prototype.constructor = Sedan.create;
+
+        **********************
+        Correct Answer: B y C
+        **********************
+        Explanation/Reference:
+        The Object.prototype property represents the Object prototype object.
+        Object.prototype.constructor Specifies the function that creates an object's prototype.
+        
+        Example:
+        Employee.prototype = new Person();
+        var Customer = function(name) {
+        this.name = name;
+        };Customer.prototype = new Person();
+        var Mime = function(name) {
+        this.name = name;
+        this.canTalk = false;
+        };Mime.prototype = newPerson();
+        
+        References:
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
+
+    </xmp>
+    <script>
+        function car() {
+            Car.prototype.fourDoor = function () { }
+            alert('four doors');
+        }
+
+        Sedan.prototype.fourDoor = function () {
+            alert('door count'); 
+            }
+
+        function Sedan() {
+        Car.call(this); }
+        Sedan.prototype = new Car();
+        Sedan.prototype.constructor = Sedan;
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

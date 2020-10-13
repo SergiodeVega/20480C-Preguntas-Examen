@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta Examen 9</title>
+    <style>
+        form, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>QUESTION 9</H1>
+    <xmp>
+        You are developing a customer web form that includes the following HTML.
+
+        <input id="txtValue" />
+
+        A customer must enter a value in the text box prior to submitting the form.
+    </xmp>
+    <div><b>You need to add validation to the text box control. <br/>
+        Which HTML should you use?</b></div>
+    <xmp>
+        A. <input id="txtValue" type="text" required="required" />
+        B. <input id="txtValue" type="text" pattern="[A-Za-z]{3}" />
+        C. <input id="txtValue" type="required" />
+        D. <input id="txtValue" type="required" autocomplete="on" />
+    </xmp>
+
+    <form>
+        Opción A: <input id="txtValue" type="text" required="required" />
+        <input type="submit" />
+    </form>
+    </br>
+    <form>
+        Opción B: <input id="txtValue" type="text" pattern="[A-Za-z]{3}" />
+        <input type="submit" />
+    </form>
+    </br>
+    <form>
+        Opción C: <input id="txtValue" type="required" />
+        <input type="submit" />
+    </form>
+    </br>
+    <form>
+        Opción D: <input id="txtValue" type="required" autocomplete="on" />
+        <input type="submit" />
+    </form>
+
+    <xmp>
+        **********************************************************************
+        Correct Answer: A
+
+        B. NO ES PORQUE NO OBLIGA A INTRODUCIR UN VALOR ANTES DE HACER EL SUBMIT.
+        C. NO ES PORQUE LA SINTAXIS ESTÁ MAL (REQUIRED NO ES UNA OPCIÓN VÁLIDA PAR EL ATRIBUTO TYPE)
+        D. NO ES POR LO MISMO QUE C.
+        **********************************************************************
+        The required attribute is a boolean attribute.
+        When present, it specifies that an input field must be filled out before submitting the form.
+
+        Reference: HTML <input> required Attribute
+        http://www.w3schools.com/tags/att_input_required.asp
+    </xmp>
+</body>
+
+</html>

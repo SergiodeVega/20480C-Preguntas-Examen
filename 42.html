@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta 42</title>
+    <style>
+        form, h1, div {
+            padding-left: 58px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>QUESTION 42</h1>
+    <xmp>
+        HOTSPOT
+        You are developing a form that captures a user's email address by using HTML5 and jQuery.
+        The form must submit the email address that the user enters.
+        You need to implement this functionality.
+    </xmp>
+    <div><b>How should you develop the form? <br/> To answer, select the appropriate options in the answer area.</b></div>
+    <xmp>      
+        NOTE: Each correct selection is worth one point.
+        Hot Area:
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+        </head>
+        <body>
+            <form>
+                <input type="text" name="email" />
+                <input type="submit" value="Submit" />
+            </form>
+            <script>
+                $("form").submit(function () {
+                    var str;
+            
+                    ********** ANSWER AREA 1 **************
+                    A: str = $("form").serialize();
+                    B: str = decodeURIComponent(str);
+                    C: str = $("form").contents.toString();
+                    D: str = $("form").toLocaleString();
+                    E: str = decodeURL(str);
+                    ******************************************
+
+                    ************* ANSWER AREA 2 **************
+                    A: str = $("form").serialize();
+                    B: str = decodeURIComponent(str);
+                    C: str = $("form").contents.toString();
+                    D: str = $("form").toLocaleString();
+                    E: str = decodeURL(str);
+                    ******************************************          
+           
+                    return true;
+                });
+            </script>
+        </body>
+        </html>
+
+        **********************************
+        Correct Answer:
+        A: str = $("form").serialize();
+        E: str = decodeURL(str);
+        **********************************
+    </xmp>
+    <form>
+        <input type="text" name="email" />
+        <input type="submit" value="Submit" />
+    </form>
+    <script>
+        $("form").submit(function () {
+            var str;
+            str = $("form").serialize();
+            str = decodeURL(str);
+            return true;
+        });
+    </script>
+
+
+
+</body>
+
+</html>

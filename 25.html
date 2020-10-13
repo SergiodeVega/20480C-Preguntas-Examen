@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Pregunta Examen 25</title>
+    <style>
+        h1, div {
+            padding-left: 58px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elButton = document.getElementById("myButton");
+            var eldIV = document.getElementById("myDiv");
+            elButton.addEventListener("click", function () {
+                alert(this.type);
+            }, false);
+        }, false)
+    </script>
+</head>
+
+<body>
+    <h1>QUESTION 25</h1>
+    <xmp>
+        You are troubleshooting a web page that includes the following code.
+
+        01    <!DOCTYPE html>
+        02    <html lang="en">
+        03    <head>
+        04        <meta charset="utf-8" />
+        05        <title></title>
+        06        <script>
+        07            document.addEventListener("DOMContentLoaded", function () {
+        08                var elButton = document.getElementById("myButton");
+        09                var eldIV = document.getElementById("myDiv");
+        10                elButton.addEventListener("click", function () {
+        11                    alert(this.type);
+        12                }, false);
+        13            }, false)
+        14        </script>
+        15    </head>
+        16    <body>
+        17        <div id="myDiv">Test</div>
+        18        <input type="button" id="myButton" value="Click Me" />
+        19    </body>
+        20    </html>
+    </xmp>
+    <div><b>What is displayed in the alert from line 11?</b></div>
+    <xmp>        
+        A. Div
+        B. Function
+        C. Button
+        D. Document
+    </xmp>
+
+    <div>Test
+        <input type="button" id="myButton" value="Click Me" />
+    </div>
+    <xmp>    
+        *****************
+        Correct Answer: C
+        *****************
+        Explanation:        
+        The event handler here normalizes event object (passed as a first argument) and invokes
+        handleCellClick in a proper context (i.e. referring to an element that was attached event
+        listener to). The element is the button elButton.addEventListener
+
+        Syntax: element.addEventListener(event, function, useCapture)
+        References:
+        https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+    </xmp>
+
+    <div id="myDiv">Test</div>
+    <input type="button" id="myButton" value="Click Me" />
+
+</body>
+
+</html>
