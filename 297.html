@@ -6,40 +6,72 @@
     <meta name="viewport" content="width=100, initial-scale=1.0">
     <title>Pregunta 297</title>
     <style>
-        form, h1, div {
+        p, h1, div {
             padding-left: 58px;
         }
     </style>
 </head>
 
 <body>
-
-    <!--
-    You are developing an application in HTML5.
-    The application contains the following HTML markup.
-    
-    -->
-
+    <h1>Question 297</h1>
+    <xmp>
+        You are developing an application in HTML5.
+        The application contains the following HTML markup.
+        
+        <div>
+            <h1>Resources</h1>
+            <a href="http:contoso.com/people.aspx">People</a>
+            <a href="http:contoso.com/orgProducts.aspx">Products</a>
+            <a href="http:wiki.contoso.org">Resources</a>
+        </div>
+    </xmp>
     <div>
-        <h1>Resources</h1>
+        <h3>Resources</h3>
         <a href="http:contoso.com/people.aspx">People</a>
         <a href="http:contoso.com/orgProducts.aspx">Products</a>
         <a href="http:wiki.contoso.org">Resources</a>
     </div>
+    <xmp>
+        You need to ensure that all of the links referencing domain names ending in.org are displayed in red text.
+    </xmp>
+    <div><b>What should you do?</b></div>
+    <xmp>
+        A. a CSS pseudo-class
+        B. a CSS attribute selector
+        C. a jQuery event callback
+        D. a JSON stringify function
+    </xmp>  
+    <p><button onclick=createClass()>Test</button></p>
+    <script>
+        function createClass(){
+            var name = "a[href*='.org']";
+            var rules = "color: red";
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            if(!(style.sheet||{}).insertRule) 
+                (style.styleSheet || style.sheet).addRule(name, rules);
+            else
+                style.sheet.insertRule(name+"{"+rules+"}",0);
+        }
+    </script>
+    <xmp>
+        *******************
+        Correct Answer: B
+        *******************
 
-    <!--
-    You need to ensure that all of the links referencing domain names ending in.org are displayed in red text.
-    
-    What should you do?
-    A. a CSS pseudo-class
-    B. a CSS attribute selector
-    C. a jQuery event callback
-    D. a JSON stringify function
+        Explanation:
         
-    
-    ************ SOLUCION ****************
+        Use the CSS attribute selector
+        a[href*=".org"] { color: red; }
 
-    -->
+        References:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+        Referencia para la comprobación del resultado:
+        https://stackoverflow.com/questions/1720320/how-to-dynamically-create-css-class-in-javascript-and-apply
+
+    </xmp>
 
 
 </body>
