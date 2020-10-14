@@ -4,6 +4,6 @@
 
 3. **Resumen del Ejercicio:**
 
-   Hasta la 212 están mejor hechas. De la 229 en adelante, todavía tengo que repasarlas.
+   Hasta la 229 están mejor hechas. De la 246 en adelante, todavía tengo que repasarlas.
 
 4. **Dificultades:** Muchas.
