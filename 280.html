@@ -6,37 +6,68 @@
     <meta name="viewport" content="width=100, initial-scale=1.0">
     <title>Pregunta 280</title>
     <style>
-        form, h1, div {
+        h1, h4, div {
             padding-left: 58px;
         }
     </style>
 </head>
 
 <body>
+    <h1>Question 280</h1>
 
-    <!--
-    You have the following markup.
+    <xmp>
+        You have the following markup.
 
-    -->
-
+        <div id="yellow" style="background-color:yellow">My Yellow Content</div>
+    
+        You need to rotate the div programmatically by 45 degrees.
+    </xmp>
+    <div><b>Which line of code should you use?</b></div>
+    <xmp>
+        A. document.getElementById(“yellow”).style.rotate(45);
+        B. document.getElementById(“yellow”).style.transform = “rotate(45deg)”;
+        C. document.getElementById(“yellow”).style.rotate3d(“45deg”);
+        D. document.getElementById(“yellow”).style.rotateX(45);
+    </xmp>
+    <h4>Comprobación</h4> </br>
     <div id="yellow" style="background-color:yellow">My Yellow Content</div>
+    </br></br>
+    <div>
+        <button onclick=functionOpcionA()>Opción A</button>
+        <button onclick=functionOpcionB()>Opción B</button>
+        <button onclick=functionOpcionC()>Opción C</button>
+        <button onclick=functionOpcionD()>Opción D</button>
+    </div>
+    <script>
+        function functionOpcionA(){
+            document.getElementById("yellow").style.rotate(45);
+        }
+        function functionOpcionB(){
+            document.getElementById("yellow").style.transform = "rotate(45deg)";
+        }
+        function functionOpcionC(){
+            document.getElementById("yellow").style.rotate3d("45deg");
+        }
+        function functionOpcionD(){
+            ocument.getElementById(yellow).style.rotateX(45);
+        }
+    </script>
+    <xmp>
+        *******************
+        CORRECT ANSWER: B
+        *******************
+        The transform property applies a 2D or 3D transformation to an element.
+        This property allows you to rotate, scale, move, skew, etc., elements.
 
-    getElementById(yellow);
+        Algunos valores de esta propiedad:
+        rotate(angle)	        Defines a 2D rotation, the angle is specified in the parameter	
+        rotate3d(x,y,z,angle)	Defines a 3D rotation	
+        rotateX(angle)      	Defines a 3D rotation along the X-axis	
+        rotateY(angle)      	Defines a 3D rotation along the Y-axis	
+        rotateZ(angle)	        Defines a 3D rotation along the Z-axis
 
-    <!--
-    You need to rotate the div programmatically by 45 degrees.
-    Which line of code should you use?
-    
-    A. document.getElementById(“yellow”).style.rotate(45);
-    B. document.getElementById(“yellow”).style.transform = “rotate(45deg)”;
-    C. document.getElementById(“yellow”).style.rotate3d(“45deg”);
-    D. document.getElementById(“yellow”).style.rotateX(45);
-        
-    
-    ******************* SOLUCION ********************
-    B.
-
-    -->
+        References: https://www.w3schools.com/jsref/prop_style_transform.asp
+    </xmp>>
 
     
 

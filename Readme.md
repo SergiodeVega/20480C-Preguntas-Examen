@@ -4,6 +4,6 @@
 
 3. **Resumen del Ejercicio:**
 
-   Hasta la 229 están mejor hechas. De la 246 en adelante, todavía tengo que repasarlas.
+   Todavía tengo algunas dudas sobre el funcionamiento de algunas comprobaciones.
 
 4. **Dificultades:** Muchas.
