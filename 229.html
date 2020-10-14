@@ -6,39 +6,67 @@
     <meta name="viewport" content="width=100, initial-scale=1.0">
     <title>Pregunta 229</title>
     <style>
-        form, h1, div {
+        img, p, h1 {
             padding-left: 58px;
         }
+         
     </style>
 </head>
 
 <body>
+    <h1>Question 229</h1>
+    <xmp>
+        You have the following code:
+        
+        <div id="red" style="background-color:red; border:dashed;">
+            <div id="yellow" style="background-color:yellow;">My Yellow Content</div>
+            <div id="green" style="background-color:green;">My green Content</div>
+        </div>
 
-    <!--
-    You have the following code:
-    -->
+        You need to ensure that the content appears as shown in the following exhibit:
+    </xmp>
+    <img src="229.jpg" alt="">
+    <br>
+    <p><b>Which display attribute should you use for the red div?</b></p>
+    <p style="color:red">NOTA: Parece que la solución puede estar mal. El resultado se consigue con la opción D y no con la C.</p>
+    <xmp>
+        A. grid
+        B. inline
+        C. block
+        D. flex
+    </xmp>
+    <p>
+        <button onclick=functionOpcionA()>Opción A</button>
+        <button onclick=functionOpcionB()>Opción B</button>
+        <button onclick=functionOpcionC()>Opción C</button>
+        <button onclick=functionOpcionD()>Opción D</button>
+    </p>
     <div id="red" style="background-color:red; border:dashed;">
         <div id="yellow" style="background-color:yellow;">My Yellow Content</div>
         <div id="green" style="background-color:green;">My green Content</div>
     </div>
+    <script>
+        function functionOpcionA(){
+            document.getElementById("red").style.display = "inline";
+        }
+        function functionOpcionB(){
+            document.getElementById("red").style.display = "inline";
+        }
+        function functionOpcionC(){
+            document.getElementById ("red").style.display = "block";
+        }
+        function functionOpcionD(){
+            document.getElementById("red").style.display = "flex";
+        }
+    </script>
+    <xmp>
+        ******************
+        Correct Answer: B
+        ******************
 
-    <!--
-    You need to ensure that the content appears as shown in the following exhibit:
-    -->   
-    <img src="229.jpg">
-
-    <!--
-    Which display attribute should you use for the red div?
-    A. grid
-    B. inline
-    C. block
-    D. flex
-       
-    
-    *********** SOLUCION ***************
-    D.
-    -->
-
+        Reference:
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    </xmp>       
 
 </body>
 
