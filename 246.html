@@ -6,67 +6,124 @@
     <meta name="viewport" content="width=100, initial-scale=1.0">
     <title>Pregunta 246</title>
     <style>
-        form, h1, div {
+        p, h1 {
             padding-left: 58px;
+        }
+        #contenedor {
+        background-color:#ffffff;
+        border:1px solid #c3c3c3;
+        height:280px;
+        max-width:400px;
+        overflow:auto;
         }
     </style>
 </head>
 
 <body>
+    <table>
+        <td id = "columnaIzquierda" valign="top">
+        <h1>Question 246</h1>
+        <xmp>
+            You display a long text content in a div.
+            You need to prevent the vertical scrollbar 
+            of the browser from being displayed.
 
-    <!--
-    You display a long text content in a div.
-    You need to prevent the vertical scrollbar of the browser from being displayed.
-    Which CSS element should you use?
-    A. @page
-    B. @keyframes
-    C. overflow-x
-    D. overflow-y
-    -->
+            Which CSS element should you use?
 
-    <div style="width: 300px; height:300px;">
-        En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
-        dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
-        los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
-        a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
-        vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
-        Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
-        mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
-        Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
-        negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
-        partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
-        algunas medidas de alivio a la ciudadanía.
-        En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
-        dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
-        los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
-        a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
-        vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
-        Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
-        mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
-        Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
-        negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
-        partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
-        algunas medidas de alivio a la ciudadanía.
-        En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
-        dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
-        los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
-        a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
-        vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
-        Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
-        mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
-        Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
-        negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
-        partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
-        algunas medidas de alivio a la ciudadanía.
-    </div>
-    
-    <!--
-
-        ************* SOLUCION *****************
-        D.
-    -->
+            A. @page
+            B. @keyframes
+            C. overflow-x
+            D. overflow-y
 
 
+            *******************
+            CORRECT ANSWER: D
+            *******************
+
+            Pulse el botón para comprobar el resultado:
+        </xmp>
+        <p><button onclick=functionSolucion()>document.getElementById("contenedor").style.overflowY = "hidden"</button></p>
+        <script>
+            function functionSolucion(){
+                document.getElementById("contenedor").style.overflowY = "hidden";
+            }
+        </script>
+        <xmp>
+            References: https://www.w3schools.com/cssref/css3_pr_overflow-y.asp
+        </xmp>
+        </td>
+        <td id="columnaDerecha" >
+            <b>Contenedor</b>
+            <div id="contenedor">
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+                En Hacienda y Economía tienen muy claro que no es momento de tocar los impuestos. Hay que
+                dejar que el enfermo se estabilice antes de tomar medidas para elevar la recaudación. Sin embargo,
+                los pactos para aprobar los Presupuestos son prioritarios. Y una subida en los tramos más altos de renta afecta
+                a pocas personas, unas 100.000 declaran más de 150.000 euros, y tendría un impacto escaso en el consumo. El
+                vicepresidente Pablo Iglesias negocia para mantener la mayoría de la moción de censura y aprobar unos
+                Presupuestos que darían estabilidad al Ejecutivo de coalición. Así podría alegar que él es el pegamento de esa
+                mayoría. Sin embargo, este bloque no aseguró ni la última prórroga del estado de alarma, ni los
+                Presupuestos fallidos de 2019. Así que Moncloa quiere aprovechar la centralidad que tiene en el tablero para
+                negociar también con Ciudadanos y garantizarse por otro lado los Presupuestos. Fuentes consultadas creen que el
+                partido naranja aceptaría una subida testimonial del IRPF a rentas muy altas siempre que acordasen con ellos
+                algunas medidas de alivio a la ciudadanía.
+            </div> 
+        </td>    
+    </table>
 </body>
 
 </html>
