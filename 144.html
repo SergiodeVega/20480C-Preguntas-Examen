@@ -26,14 +26,18 @@
         Code Segments                       Answer Area
 
                                             <script>
-        A: v3 + v4;                         function add(v1,v2) {
-        B: o.v3 + o.v4;                         return v1+v2+ ***** ANSWER-1 *****
-        C: this.v3 + this.v4;               }   
-        D: this.o.v3 + this.o.v4;           function addValues() {
+                                                function add(v1,v2) {
+                                                              ********************  
+        A: v3 + v4;                             return v1+v2+ ***** ANSWER-1 *****
+        B: o.v3 + o.v4;                                       ********************
+        C: this.v3 + this.v4;                   }   
+        D: this.o.v3 + this.o.v4;               function addValues() {
         E: add (o, 15, 3);                      var o = { v3: 10, v4: 13};
-        F: add (15,3) + o;                      var res = ***** ANSWER-2 *****
-        G: add.call (o, 15, 3);                 return res;
-        H: add.apply (o, 15, 3);            }
+        F: add (15,3) + o;                                ********************
+        G: add.call (o, 15, 3);                 var res = ***** ANSWER-2 *****
+        H: add.apply (o, 15, 3);                          ********************
+                                                return res;
+                                                }
                                             </script>
 
     </xmp>
