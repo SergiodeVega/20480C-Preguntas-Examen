@@ -24,7 +24,6 @@
         an alert is displayed if the numberValue type is not a number.
     </xmp>
     <div><b>Which five code blocks should you use to develop the solution?</b></div>
-    <div style="color:red">NOTA: No funciona????.</div>
     <xmp>
         NOTE: Each correct selection is worth one point. 
 
@@ -46,15 +45,23 @@
         *******************************
         CORRECT ANSWER: B, E, C, D, A
         *******************************
+    </xmp>
+    <div style="color:red">ERRATA: El orden correcto es B, C, E, F, A.<br>
+        En JavaScript isNaN(currentNumberValue) es la función más indicada<br>
+        para evaluar numéricos. Además el orden de las instrucciones cuando<br>
+        se llama a la función de validación también es importante, pues<br>
+        si dejas fuera la instrucción E, cuando haga la validación no actualizará<br>
+        la variable con el valor del input:numberValue..</div>
 
+    <xmp>
         <script>
             document.getElementById("numberBtn").onclick = validateNumberInput;
 
-            var currentNumberValue = document.getElementById("numberValue").value;
-
             function validateNumberInput() {
 
-                if (typeof(currentNumberValue) != 'number')
+                var currentNumberValue = document.getElementById("numberValue").value;
+
+                if (isNaN(currentNumberValue))
 
                 alert('Please enter a number');}
         </script>
@@ -80,11 +87,11 @@
     <script>
         document.getElementById("numberBtn").onclick = validateNumberInput;
 
-        var currentNumberValue = document.getElementById("numberValue").value;
-
         function validateNumberInput() {
 
-            if (typeof(currentNumberValue) != 'number')
+            var currentNumberValue = document.getElementById("numberValue").value;
+
+            if (isNaN(currentNumberValue))
 
             alert('Please enter a number');}
     </script>
