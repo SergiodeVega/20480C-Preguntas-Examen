@@ -65,7 +65,7 @@
         **********************************
         Correct Answer:
         A: str = $("form").serialize();
-        E: str = decodeURL(str);
+        E: str = decodeURI(str);
         **********************************
 
 
@@ -80,8 +80,8 @@
             var str;
             str = $("form").serialize();
             str = decodeURI(str);
+            alert(str);
             return true;
-            alert
         });
     </script>
 
